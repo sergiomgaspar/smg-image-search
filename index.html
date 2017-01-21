@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>SMG - Image Search Microservice</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   </head>
+   <body>
+      <div class="container">
+         <h1 class="header">
+            Image Search Microservice for FreeCodeCamp
+         </h1>
+         <blockquote>
+            User stories:
+            <ul>1) I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+            </ul>
+            <ul>2) I can paginate through the responses by adding a ?offset=2 parameter to the URL.</ul>
+            <ul>3) I can get a list of the most recently submitted search strings.</ul>
+         </blockquote>
+         <h3>Example usage (get search results):</h3>
+         <code>https://smg-image-search.herokuapp.com/api/imagesearch/lol%20cats?offset=10 </code><br>
+         <h3>Example output:</h3>
+         <code>
+         [<br>{<br>
+         "title": "30 Best LOLcats Ever | SMOSH",<br>
+         "url": "http://www.bing.com/cr?...",<br>
+         "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.Mda9713ebc2c4c40254b4a04758166c92o0&pid=Api",<br>
+         "context": "www.smosh.com/smosh-pit/photos/30-best-lol-cats-ever"<br>
+         }<br>,{...}<br>
+         ]<br>
+         </code>
+         <h3>Example usage (get last searches list):</h3>
+         <code>https://smg-image-search.herokuapp.com/api/latest/imagesearch </code><br>
+         <h3>Example output:</h3>
+         <code>
+         [<br>{<br>
+         "searchQuery": "lol cats",<br>
+         "searchDate": "2017-01-21T10:31:01.431Z"<br>
+         },<br>
+         {<br>
+         "searchQuery": "sad cats",<br>
+         "searchDate": "2017-01-21T09:43:45.953Z"<br>
+         }
+         <br>,{...}<br>
+         ]<br>
+         </code>
+      </div>
+      <br><br>
+   </body>
+   <footer class="footer">
+      <script src="https://use.fontawesome.com/c51cc08ec6.js"></script>
+      <div class="container-fluid text-center">
+         <div class="footer-text text-muted row">
+            Created by Sérgio Gaspar for freeCodeCamp Challenge:
+            <a href="https://www.freecodecamp.com/challenges/url-shortener-microservice" target="_blank">URL Shortener Microservice</a>.
+         </div>
+         <div class="social-icons">
+            <h2><a href="https://github.com/sergiomgaspar" target="_blank"  ><i id="github" class="fa fa-github" aria-hidden="true"></i></a>
+               <a href="http://codepen.io/sergiomgaspar/" target="_blank"><i id="codepen" class="fa fa-codepen" aria-hidden="true"></i></a>
+               <a href="https://www.freecodecamp.com/sergiomgaspar" target="_blank"><i id="freecodecamp" class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+               <a href="https://www.linkedin.com/in/sergiomgaspar" target="_blank"><i id="linkedin" class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+               <a href="https://twitter.com/sergiomgaspar" target="_blank"><i id="twitter" class="fa fa-twitter" aria-hidden="true"></i></a>
+            </h2>
+         </div>
+      </div>
+   </footer>
+</html>

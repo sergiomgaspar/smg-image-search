@@ -1,0 +1,27 @@
+{
+  "name": "@sergiomgaspar/sandbox",
+  "version": "1.0.2",
+  "description": "FCC Image Search API",
+  "main": "image-search.js",
+  "scripts": {
+    "start": "node image-search.js",
+    "test": "node image-search.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiomgaspar/smg-image-search.git"
+  },
+  "author": "sergiomgaspar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiomgaspar/smg-image-search/issues"
+  },
+  "homepage": "https://github.com/sergiomgaspar/smg-image-search#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.20",
+    "request": "^2.79.0",
+    "valid-url": "^1.0.9"
+  }
+}
