@@ -6,8 +6,11 @@ var logger = require('../common/logger');
 	'use strict';
 	
 	var apiKey = process.env.IMG_API_KEY || 'N/A';
-	var maxResults = process.env.MAX_RESULTS || 10;	// Number of results shown
 	
+	// Validation the env variable is a number
+	if (process.env.MAX_RESULTS != undefined && typeof parseInt(process.env.MAX_RESULTS) === 'number') maxResults = process.env.MAX_RESULTS; 
+		else maxResults = 10; // Defaults to 10
+
 	// Exports
 	module.exports.testRoute = testRoute;
 	module.exports.getImages = getImages;
